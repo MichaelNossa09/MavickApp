@@ -1,0 +1,131 @@
+a{
+    text-decoration: none;
+}
+
+
+
+.container-header{
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    background-color: #c9ada7;
+
+
+    .logo{
+        
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        padding: 15px;
+
+        .caja1{
+            // border: 1px solid rgb(70,69,69);
+            // background-color: wheat;
+            justify-content: flex-start;
+            text-align: center;
+
+            svg{
+                // background-color: aqua;
+                display: flex;
+                height: 100px;
+
+                g{
+                    cursor: pointer;
+                    
+                }
+                g:hover{
+                    fill: #000000;
+                }
+            }
+        }
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: row wrap;
+        background-color: #000000;
+        padding: 5px;
+
+        .item{
+            text-decoration: none;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+        .item:hover{
+            transform: translateX(-5px);
+        }
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown:hover{
+            transform: translateX(-1px);
+            transition: all .2s ease;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            min-width: 130px;
+            z-index: 1;
+            padding: 5px 0;
+            border: 1px solid;
+        }
+        .dropdown-content a{
+            color: #000000;
+            display: flex;
+            flex-flow: column;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-bottom: 1px solid #000000;
+        }
+        .dropdown-content a:last-child{
+            border: none;
+        }
+        .dropdown-content a:hover{
+            transition: all .3s ease;
+            transform: translateX(2px);
+        }
+        .dropdown:hover .dropdown-content{
+            display: flex;
+            flex-flow: column wrap;
+            align-items: flex-start;
+            transition: all .3s ease;
+            border: none;
+            background-color: #f2e9e4;
+        }
+        
+        .caja3{
+            display: flex;
+            align-items: flex-start;
+            margin: 10px 0;
+
+            a{
+                text-decoration: none;
+            }
+            a:hover{
+                transform: translateX(-10px);
+                transition: all .2s ease;
+
+                svg{
+                    path:first{
+                        fill: #f2e9e4;
+                    }
+                    
+                    .clr-i-solid{
+                        fill: #f2e9e4;
+                    }
+                }
+
+            }
+            a:not(:hover){
+                transition: all .3s ease;
+            }
+        }
+    }
+}

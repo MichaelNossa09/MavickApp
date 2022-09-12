@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+</head>
+<body>
+    <h1 style="text-align:center;">Sistema de administración de Personas (SAP)</h1>
+    <div>
+        <a href="addClient">Add Cliente</a>
+    </div>
+    <hr>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cliente in Clientes %}
+                <tr>
+                    <td>{{cliente.id}}</td>
+                    <td>{{cliente.nombre}} {{cliente.apellido}}</td>
+                    <td>{{cliente.correo}}</td>
+                    <td>{{cliente.contrasenia}}</td>
+                    <td>{{cliente.telefono}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <hr>
+</body>
+</html>
